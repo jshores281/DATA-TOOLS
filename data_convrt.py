@@ -17,7 +17,7 @@ import csv
 import argparse
 
 
-# ask user what type of file will be loading (?ext to csv)
+# ask user what type of file will be loading (?ext to csv) 
 
 
 
