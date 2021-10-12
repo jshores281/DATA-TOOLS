@@ -8,22 +8,32 @@
 #
 ############################################################
 
+import csv, sys, os
+import argparse, pathlib
 
-
-
-
-
-import csv 
-import argparse
-
-
+os.system("cls")
 # ask user what type of file will be loading (?ext to csv) 
 
+parser = argparse.ArgumentParser(description='Process some DATA.', usage='data_convrt.py [txt, pdf, csv, google sheets]')
+
+parser.add_argument('string', metavar='[STRING]', type=str, nargs='+',
+                    help='Specify which type of file reading [txt, pdf, csv, google sheets]')
+
+parser.add_argument('read', type=argparse.FileType('r'),
+            		help='read command ')
+
+#parser.add_argument( 'convert', default=sys.stdout, type=argparse.FileType('w'),help='the location where data will be written')
+
+
+args = parser.parse_args()
 
 
 
 def load_text():
-	pass
+	with args.read.open('r') as _READ:
+		print(_READ.read())
+
+	
 
 
 def load_pdf():
@@ -43,6 +53,12 @@ def load_gsheets():
 
 
 
+
+for string in args.string:
+	if string == "txt":
+		load_text()
+	elif string == "pdf":
+		print("ooopss need a pdf")
 
 
 
