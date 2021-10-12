@@ -1,0 +1,11 @@
+#! python3.7.2
+#################################################################
+# CSV & DATABASE MECH
+#################################################################
+# = TASKS
+# ~ csv (load data into / read data out of)
+# ~ sqlalchemy ORM (auto load data into DB from csv)
+# ~ sqlalchemy ORM (create ORM points from DB to HTML entry field (SQL QUERY AND PUTS))
+# ~ django site ( import csv into database, manual entry field data add, login to data query(password aes256/time shift rotating salting))
+
+#################################################################
